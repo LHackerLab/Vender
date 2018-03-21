@@ -1,9 +1,7 @@
 package hacker.l.venderapp.fragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -15,11 +13,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import hacker.l.venderapp.R;
-import hacker.l.venderapp.activity.DashboardActivity;
 import hacker.l.venderapp.utilities.FontManager;
 
 
-public class HomeFragment extends Fragment implements View.OnClickListener {
+public class OpenBookingFragment extends Fragment implements View.OnClickListener {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -27,8 +24,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private String mParam1;
     private String mParam2;
 
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
+    public static OpenBookingFragment newInstance(String param1, String param2) {
+        OpenBookingFragment fragment = new OpenBookingFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -56,7 +53,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         context = getActivity();
-        view = inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_open_booking, container, false);
         init();
         return view;
     }
@@ -120,45 +117,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.layout_accept:
-                AcceptFragment acceptFragment = AcceptFragment.newInstance("", "");
-                moveFragment(acceptFragment);
-                break;
-            case R.id.layout_trip:
-                MyTripFragment myTripFragment = MyTripFragment.newInstance("", "");
-                moveFragment(myTripFragment);
-                break;
-            case R.id.layout_profile:
-                MyProfileFragment profileFragment = MyProfileFragment.newInstance("", "");
-                moveFragment(profileFragment);
-                break;
-            case R.id.layout_triphistory:
-                MyTripHistoryFragment myTripHistoryFragment = MyTripHistoryFragment.newInstance("", "");
-                moveFragment(myTripHistoryFragment);
-                break;
-            case R.id.layout_adddriver:
-                AddDriverFragment addDriverFragment = AddDriverFragment.newInstance("", "");
-                moveFragment(addDriverFragment);
-            case R.id.layout_addcabs:
-                AddCabsFragment addCabsFragment = AddCabsFragment.newInstance("", "");
-                moveFragment(addCabsFragment);
-                break;
-            case R.id.layout_mycabs:
-                MyCabsFragment myCabsFragment = MyCabsFragment.newInstance("", "");
-                moveFragment(myCabsFragment);
-                break;
-            case R.id.layout_mydrivers:
-                MyDriversFragment myDriversFragment = MyDriversFragment.newInstance("", "");
-                moveFragment(myDriversFragment);
-                break;
-            case R.id.layout_myaccount:
-                MyAccountFragment myAccountFragment = MyAccountFragment.newInstance("", "");
-                moveFragment(myAccountFragment);
-                break;
-            case R.id.layout_freecars:
-                MyCarFreeFragment myCarFreeFragment = MyCarFreeFragment.newInstance("", "");
-                moveFragment(myCarFreeFragment);
-                break;
         }
     }
 }

@@ -1,7 +1,6 @@
 package hacker.l.venderapp.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,7 +9,7 @@ import android.view.ViewGroup;
 
 import hacker.l.venderapp.R;
 
-public class AddCabsFragment extends Fragment {
+public class SettingsFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -21,8 +20,8 @@ public class AddCabsFragment extends Fragment {
     private String mParam2;
 
 
-    public static AddCabsFragment newInstance(String param1, String param2) {
-        AddCabsFragment fragment = new AddCabsFragment();
+    public static SettingsFragment newInstance(String param1, String param2) {
+        SettingsFragment fragment = new SettingsFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,7 +46,7 @@ public class AddCabsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         context = getActivity();
-        view = inflater.inflate(R.layout.fragment_add_cabs, container, false);
+        view = inflater.inflate(R.layout.fragment_settings, container, false);
         return view;
     }
 }

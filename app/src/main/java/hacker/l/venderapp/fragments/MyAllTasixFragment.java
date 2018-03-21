@@ -1,7 +1,6 @@
 package hacker.l.venderapp.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,8 +9,7 @@ import android.view.ViewGroup;
 
 import hacker.l.venderapp.R;
 
-
-public class AddDriverFragment extends Fragment {
+public class MyAllTasixFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -22,8 +20,8 @@ public class AddDriverFragment extends Fragment {
     private String mParam2;
 
 
-    public static AddDriverFragment newInstance(String param1, String param2) {
-        AddDriverFragment fragment = new AddDriverFragment();
+    public static MyAllTasixFragment newInstance(String param1, String param2) {
+        MyAllTasixFragment fragment = new MyAllTasixFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -48,7 +46,7 @@ public class AddDriverFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         context = getActivity();
-        view = inflater.inflate(R.layout.fragment_add_driver, container, false);
+        view = inflater.inflate(R.layout.fragment_my_all_taxis, container, false);
         return view;
     }
 }

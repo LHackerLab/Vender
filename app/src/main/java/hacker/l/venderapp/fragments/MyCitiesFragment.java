@@ -1,7 +1,6 @@
 package hacker.l.venderapp.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,8 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import hacker.l.venderapp.R;
-
-public class MyProfileFragment extends Fragment {
+public class MyCitiesFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -21,8 +19,8 @@ public class MyProfileFragment extends Fragment {
     private String mParam2;
 
 
-    public static hacker.l.venderapp.fragments.MyProfileFragment newInstance(String param1, String param2) {
-        hacker.l.venderapp.fragments.MyProfileFragment fragment = new hacker.l.venderapp.fragments.MyProfileFragment();
+    public static MyCitiesFragment newInstance(String param1, String param2) {
+        MyCitiesFragment fragment = new MyCitiesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,7 +45,7 @@ public class MyProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         context = getActivity();
-        view = inflater.inflate(R.layout.fragment_my_profile, container, false);
+        view = inflater.inflate(R.layout.fragment_my_cities, container, false);
         return view;
     }
 }

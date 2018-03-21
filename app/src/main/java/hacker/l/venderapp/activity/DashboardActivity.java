@@ -1,10 +1,7 @@
 package hacker.l.venderapp.activity;
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -21,15 +18,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import hacker.l.venderapp.R;
-import hacker.l.venderapp.fragments.HomeFragment;
+import hacker.l.venderapp.fragments.OpenBookingFragment;
 import hacker.l.venderapp.utilities.FontManager;
 
 public class DashboardActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
-    TextView tv_information,tv_tripmanager,tv_settings,tv_drivres,tv_taxi,tv_city,tv_account,tv_toturial,tv_completeTrip,
-            tv_avality,tv_bids,tv_booking,tv_opnebooking;
-    LinearLayout layout_information ,layout_tripmanager,layout_settings,layout_driverList,layout_taxi,layout_city,
-            layout_completeTrip,layout_account,layout_toturial,layout_avality,layout_vids,layout_booking,layout_opnebooking;
+    TextView tv_information, tv_tripmanager, tv_settings, tv_drivres, tv_taxi, tv_city, tv_account, tv_toturial, tv_completeTrip,
+            tv_avality, tv_bids, tv_booking, tv_opnebooking;
+    LinearLayout layout_information, layout_tripmanager, layout_settings, layout_driverList, layout_taxi, layout_city,
+            layout_completeTrip, layout_account, layout_toturial, layout_avality, layout_vids, layout_booking, layout_opnebooking;
     DrawerLayout drawer;
 
     @Override
@@ -92,8 +89,8 @@ public class DashboardActivity extends AppCompatActivity
         tv_booking.setTypeface(nova);
         tv_opnebooking.setTypeface(nova);
         setOnclick();
-        HomeFragment homeFragment = HomeFragment.newInstance("", "");
-        moveFragment(homeFragment);
+        OpenBookingFragment openBookingFragment = OpenBookingFragment.newInstance("", "");
+        moveFragment(openBookingFragment);
     }
 
     private void setOnclick() {
@@ -186,9 +183,9 @@ public class DashboardActivity extends AppCompatActivity
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.layout_information:
-                HomeFragment homeFragment = HomeFragment.newInstance("", "");
-                moveFragment(homeFragment);
+            case R.id.layout_opnebooking:
+                OpenBookingFragment openBookingFragment = OpenBookingFragment.newInstance("", "");
+                moveFragment(openBookingFragment);
                 navHide();
                 break;
         }

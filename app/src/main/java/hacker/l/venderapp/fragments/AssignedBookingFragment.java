@@ -1,7 +1,6 @@
 package hacker.l.venderapp.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,7 +9,8 @@ import android.view.ViewGroup;
 
 import hacker.l.venderapp.R;
 
-public class ServiceZoneFragment extends Fragment {
+
+public class AssignedBookingFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -21,8 +21,8 @@ public class ServiceZoneFragment extends Fragment {
     private String mParam2;
 
 
-    public static hacker.l.venderapp.fragments.ServiceZoneFragment newInstance(String param1, String param2) {
-        hacker.l.venderapp.fragments.ServiceZoneFragment fragment = new hacker.l.venderapp.fragments.ServiceZoneFragment();
+    public static AssignedBookingFragment newInstance(String param1, String param2) {
+        AssignedBookingFragment fragment = new AssignedBookingFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,7 +47,7 @@ public class ServiceZoneFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         context = getActivity();
-        view = inflater.inflate(R.layout.fragment_service_zone, container, false);
+        view = inflater.inflate(R.layout.fragment_assigned_booking, container, false);
         return view;
     }
 }

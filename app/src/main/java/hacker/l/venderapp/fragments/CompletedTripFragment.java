@@ -1,7 +1,6 @@
 package hacker.l.venderapp.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,7 +9,8 @@ import android.view.ViewGroup;
 
 import hacker.l.venderapp.R;
 
-public class MyCarFreeFragment extends Fragment {
+
+public class CompletedTripFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -21,8 +21,8 @@ public class MyCarFreeFragment extends Fragment {
     private String mParam2;
 
 
-    public static hacker.l.venderapp.fragments.MyCarFreeFragment newInstance(String param1, String param2) {
-        hacker.l.venderapp.fragments.MyCarFreeFragment fragment = new hacker.l.venderapp.fragments.MyCarFreeFragment();
+    public static CompletedTripFragment newInstance(String param1, String param2) {
+        CompletedTripFragment fragment = new CompletedTripFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -47,7 +47,7 @@ public class MyCarFreeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         context = getActivity();
-        view = inflater.inflate(R.layout.fragment_my_car_free, container, false);
+        view = inflater.inflate(R.layout.fragment_completed_trip, container, false);
         return view;
     }
 }
