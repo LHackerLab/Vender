@@ -18,7 +18,19 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import hacker.l.venderapp.R;
+import hacker.l.venderapp.fragments.AssignedBookingFragment;
+import hacker.l.venderapp.fragments.AvaillabilityFragment;
+import hacker.l.venderapp.fragments.CompletedTripFragment;
+import hacker.l.venderapp.fragments.InformationFragment;
+import hacker.l.venderapp.fragments.MyAccountFragment;
+import hacker.l.venderapp.fragments.MyAllTasixFragment;
+import hacker.l.venderapp.fragments.MyBidsFragment;
+import hacker.l.venderapp.fragments.MyCitiesFragment;
+import hacker.l.venderapp.fragments.MyDriversFragment;
 import hacker.l.venderapp.fragments.OpenBookingFragment;
+import hacker.l.venderapp.fragments.SettingsFragment;
+import hacker.l.venderapp.fragments.TripManagerFragment;
+import hacker.l.venderapp.fragments.TutorialsFragment;
 import hacker.l.venderapp.utilities.FontManager;
 
 public class DashboardActivity extends AppCompatActivity
@@ -183,11 +195,73 @@ public class DashboardActivity extends AppCompatActivity
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.layout_information:
+                InformationFragment infomation = InformationFragment.newInstance("", "");
+                moveFragment(infomation);
+                navHide();
+                break;
+            case R.id.layout_tripmanager:
+                TripManagerFragment tripManagerFragment = TripManagerFragment.newInstance("", "");
+                moveFragment(tripManagerFragment);
+                navHide();
+                break;
+            case R.id.layout_settings:
+                SettingsFragment settingsFragment = SettingsFragment.newInstance("", "");
+                moveFragment(settingsFragment);
+                navHide();
+                break;
+            case R.id.layout_driverList:
+                MyDriversFragment myDriversFragment = MyDriversFragment.newInstance("", "");
+                moveFragment(myDriversFragment);
+                navHide();
+                break;
+            case R.id.layout_taxi:
+                MyAllTasixFragment myAllTasixFragment = MyAllTasixFragment.newInstance("", "");
+                moveFragment(myAllTasixFragment);
+                navHide();
+                break;
+            case R.id.layout_city:
+                MyCitiesFragment myCitiesFragment = MyCitiesFragment.newInstance("", "");
+                moveFragment(myCitiesFragment);
+                navHide();
+                break;
+            case R.id.layout_account:
+                MyAccountFragment myAccountFragment = MyAccountFragment.newInstance("", "");
+                moveFragment(myAccountFragment);
+                navHide();
+                break;
+            case R.id.layout_toturial:
+                TutorialsFragment tutorialsFragment = TutorialsFragment.newInstance("", "");
+                moveFragment(tutorialsFragment);
+                navHide();
+                break;
+            case R.id.layout_completeTrip:
+                CompletedTripFragment completedTripFragment = CompletedTripFragment.newInstance("", "");
+                moveFragment(completedTripFragment);
+                navHide();
+                break;
+            case R.id.layout_avality:
+                AvaillabilityFragment availlabilityFragment = AvaillabilityFragment.newInstance("", "");
+                moveFragment(availlabilityFragment);
+                navHide();
+                break;
+            case R.id.layout_vids:
+                MyBidsFragment myBidsFragment = MyBidsFragment.newInstance("", "");
+                moveFragment(myBidsFragment);
+                navHide();
+                break;
+            case R.id.layout_booking:
+                AssignedBookingFragment assignedBookingFragment = AssignedBookingFragment.newInstance("", "");
+                moveFragment(assignedBookingFragment);
+                navHide();
+                break;
             case R.id.layout_opnebooking:
                 OpenBookingFragment openBookingFragment = OpenBookingFragment.newInstance("", "");
                 moveFragment(openBookingFragment);
                 navHide();
                 break;
+
+
         }
     }
 }
