@@ -41,7 +41,7 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                        android:id="@+id/layout_home"
+                        android:id="@+id/layout_opnebooking"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/background"
@@ -55,13 +55,229 @@
                             android:src="@drawable/home" />
 
                         <TextView
-                            android:id="@+id/tv_home"
+                            android:id="@+id/tv_opnebooking"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:background="@color/white"
                             android:gravity="center|left"
-                            android:text="Home"
+                            android:text="Open Bookings"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_booking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/drievers" />
+
+                        <TextView
+                            android:id="@+id/tv_booking"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:gravity="center|left"
+                            android:text="Assigned Bookings"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_vids"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/mycabs" />
+
+                        <TextView
+                            android:id="@+id/tv_bids"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:gravity="center|left"
+                            android:text="My Bids"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_avality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/mycarfree" />
+
+                        <TextView
+                            android:id="@+id/tv_avality"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:gravity="center|left"
+                            android:text="Availability"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_completeTrip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/service" />
+
+                        <TextView
+                            android:id="@+id/tv_completeTrip"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:gravity="center|left"
+                            android:text="Completed Trips"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_toturial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/changepass" />
+
+                        <TextView
+                            android:id="@+id/tv_toturial"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:gravity="center|left"
+                            android:text="Tutorials"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/account" />
+
+                        <TextView
+                            android:id="@+id/tv_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:gravity="center|left"
+                            android:text="My Account"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/help" />
+
+                        <TextView
+                            android:id="@+id/tv_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:gravity="center|left"
+                            android:text="My Cities"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_taxi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/help" />
+
+                        <TextView
+                            android:id="@+id/tv_taxi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:gravity="center|left"
+                            android:text="My Taxis"
                             android:textAllCaps="false"
                             android:textColor="@color/primary"
                             android:textSize="14dp"></TextView>
@@ -79,10 +295,10 @@
                             android:layout_height="30dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/drievers" />
+                            android:src="@drawable/help" />
 
                         <TextView
-                            android:id="@+id/tv_driverslist"
+                            android:id="@+id/tv_drivres"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
@@ -95,61 +311,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/layout_vehiclelist"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/mycabs" />
-
-                        <TextView
-                            android:id="@+id/tv_vehicle"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="10dp"
-                            android:background="@color/white"
-                            android:gravity="center|left"
-                            android:text="My Vehicles"
-                            android:textAllCaps="false"
-                            android:textColor="@color/primary"
-                            android:textSize="14dp"></TextView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/layout_freecars"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/mycarfree" />
-
-                        <TextView
-                            android:id="@+id/tv_freeCars"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="10dp"
-                            android:background="@color/white"
-                            android:gravity="center|left"
-                            android:text="My Free Cars"
-                            android:textAllCaps="false"
-                            android:textColor="@color/primary"
-                            android:textSize="14dp"></TextView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/layout_servicezone"
+                        android:id="@+id/layout_settings"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/background"
@@ -163,74 +325,20 @@
                             android:src="@drawable/service" />
 
                         <TextView
-                            android:id="@+id/tv_serviceZone"
+                            android:id="@+id/tv_settings"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:background="@color/white"
                             android:gravity="center|left"
-                            android:text="Service Zone"
+                            android:text="Settings"
                             android:textAllCaps="false"
                             android:textColor="@color/primary"
                             android:textSize="14dp"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/layout_chagepass"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/changepass" />
-
-                        <TextView
-                            android:id="@+id/tv_changepass"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="10dp"
-                            android:background="@color/white"
-                            android:gravity="center|left"
-                            android:text="Change Password"
-                            android:textAllCaps="false"
-                            android:textColor="@color/primary"
-                            android:textSize="14dp"></TextView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/layout_about"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/about" />
-
-                        <TextView
-                            android:id="@+id/tv_about"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="10dp"
-                            android:background="@color/white"
-                            android:gravity="center|left"
-                            android:text="About"
-                            android:textAllCaps="false"
-                            android:textColor="@color/primary"
-                            android:textSize="14dp"></TextView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/layout_help"
+                        android:id="@+id/layout_tripmanager"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/background"
@@ -244,13 +352,40 @@
                             android:src="@drawable/help" />
 
                         <TextView
-                            android:id="@+id/tv_help"
+                            android:id="@+id/tv_tripmanager"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:background="@color/white"
                             android:gravity="center|left"
-                            android:text="Help"
+                            android:text="Trip Manager"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/help" />
+
+                        <TextView
+                            android:id="@+id/tv_information"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/white"
+                            android:gravity="center|left"
+                            android:text="Information"
                             android:textAllCaps="false"
                             android:textColor="@color/primary"
                             android:textSize="14dp"></TextView>
