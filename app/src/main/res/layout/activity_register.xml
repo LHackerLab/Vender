@@ -31,7 +31,7 @@
                     android:layout_height="120dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/margin5"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/logo" />
 
                 <EditText
                     android:id="@+id/id_et_userName"
