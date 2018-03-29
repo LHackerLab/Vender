@@ -25,6 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import hacker.l.venderapp.R;
+import hacker.l.venderapp.database.DbHelper;
 import hacker.l.venderapp.fragments.AssignedBookingFragment;
 import hacker.l.venderapp.fragments.AvaillabilityFragment;
 import hacker.l.venderapp.fragments.CompletedTripFragment;
@@ -154,6 +155,8 @@ public class DashboardActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            DbHelper dbHelper=new DbHelper(this);
+            dbHelper.deleteUserData();
             Intent intent = new Intent(DashboardActivity.this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
