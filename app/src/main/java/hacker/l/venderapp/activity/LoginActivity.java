@@ -37,7 +37,7 @@ import hacker.l.venderapp.utilities.Utility;
 public class LoginActivity extends AppCompatActivity {
     Button id_bt_login;
     TextView signUpText, forgot_password;
-    EditText id_et_username, id_et_password;
+    EditText id_phone, id_et_password;
     CheckBox showCheck;
     LinearLayout layout_singup;
     ProgressDialog pd;
@@ -49,8 +49,8 @@ public class LoginActivity extends AppCompatActivity {
         id_bt_login = (Button) findViewById(R.id.id_bt_login);
         signUpText = (TextView) findViewById(R.id.signUpText);
         forgot_password = (TextView) findViewById(R.id.forgot_password);
-        id_et_username = (EditText) findViewById(R.id.id_et_username);
-        id_et_password = (EditText) findViewById(R.id.id_et_password);
+        id_phone = (EditText) findViewById(R.id.id_phone);
+        id_et_password = (EditText) findViewById(R.id.id_password);
         showCheck = (CheckBox) findViewById(R.id.show_password);
         layout_singup = (LinearLayout) findViewById(R.id.layout_singup);
         id_bt_login.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginFunction() {
-        final String userPhone = id_et_username.getText().toString();
+        final String userPhone = id_phone.getText().toString();
         final String userPass = id_et_password.getText().toString();
 //        if (userPhone.length() == 0) {
 //            id_et_username.setError("Enter  Phone Number ");
@@ -113,9 +113,9 @@ public class LoginActivity extends AppCompatActivity {
 //                                        for (Result result : myPojo.getResult()) {
 //                                            if (result != null) {
 //                                                new DbHelper(LoginActivity.this).upsertUserData(result);
-            Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
+        Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
 //                                            }
 //                                        }
 //                                    }
@@ -150,6 +150,7 @@ public class LoginActivity extends AppCompatActivity {
 //            }
 //        }
     }
+
     //for hid keyboard when tab outside edittext box
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {

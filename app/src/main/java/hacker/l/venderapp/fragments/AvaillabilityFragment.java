@@ -47,6 +47,11 @@ public class AvaillabilityFragment extends Fragment {
         // Inflate the layout for this fragment
         context = getActivity();
         view = inflater.inflate(R.layout.fragment_availlability, container, false);
+        init();
         return view;
+    }
+
+    private void init() {
+
     }
 }

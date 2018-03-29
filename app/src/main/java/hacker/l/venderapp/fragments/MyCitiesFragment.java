@@ -46,6 +46,11 @@ public class MyCitiesFragment extends Fragment {
         // Inflate the layout for this fragment
         context = getActivity();
         view = inflater.inflate(R.layout.fragment_my_cities, container, false);
+        init();
         return view;
+    }
+
+    private void init() {
+
     }
 }

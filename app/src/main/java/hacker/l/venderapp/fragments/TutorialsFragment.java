@@ -47,6 +47,11 @@ public class TutorialsFragment extends Fragment {
         // Inflate the layout for this fragment
         context = getActivity();
         view = inflater.inflate(R.layout.fragment_tutorials, container, false);
+        init();
         return view;
+    }
+
+    private void init() {
+
     }
 }

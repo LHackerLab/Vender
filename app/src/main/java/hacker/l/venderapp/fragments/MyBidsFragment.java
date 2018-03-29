@@ -48,6 +48,11 @@ public class MyBidsFragment extends Fragment {
         // Inflate the layout for this fragment
         context = getActivity();
         view = inflater.inflate(R.layout.fragment_my_bids, container, false);
+        init();
         return view;
+    }
+
+    private void init() {
+
     }
 }

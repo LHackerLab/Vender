@@ -48,6 +48,11 @@ public class InformationFragment extends Fragment {
         // Inflate the layout for this fragment
         context = getActivity();
         view = inflater.inflate(R.layout.fragment_information, container, false);
+        init();
         return view;
+    }
+
+    private void init() {
+
     }
 }

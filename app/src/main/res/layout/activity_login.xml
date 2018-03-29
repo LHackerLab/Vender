@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/margin10">
+        android:layout_margin="@dimen/margin10"
+        app:cardBackgroundColor="@android:color/transparent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,42 +38,55 @@
                 android:layout_marginTop="@dimen/margin15"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/id_et_username"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/margin40"
-                    android:layout_margin="@dimen/dimen_15_dp"
-                    android:background="@drawable/done_corner_round"
-                    android:drawablePadding="10dp"
-                    android:hint="Phone Number"
-                    android:imeOptions="actionNext"
-                    android:inputType="number"
-                    android:maxLength="10"
-                    android:paddingLeft="@dimen/dimen_10_dp"
-                    android:singleLine="true"
-                    android:textColor="@color/color0E0E0F"
-                    android:textColorHint="@color/color595c63"
-                    android:textCursorDrawable="@null"
-                    android:textSize="@dimen/textSize14" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:orientation="vertical"
+                    app:hintAnimationEnabled="true">
 
+                    <EditText
+                        android:id="@+id/id_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin20"
+                        android:gravity="center|left"
+                        android:hint="Mobile Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color0E0E0F"
+                        android:textColorHint="@color/color595c63"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/textSize14" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/id_et_password"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/margin40"
-                    android:layout_marginLeft="@dimen/dimen_15_dp"
-                    android:layout_marginRight="@dimen/dimen_15_dp"
-                    android:background="@drawable/done_corner_round"
-                    android:hint="User Password"
-                    android:imeOptions="actionDone"
-                    android:inputType="textPassword"
-                    android:maxLength="30"
-                    android:paddingLeft="@dimen/dimen_10_dp"
-                    android:singleLine="true"
-                    android:textColor="@color/color0E0E0F"
-                    android:textColorHint="@color/color595c63"
-                    android:textCursorDrawable="@null"
-                    android:textSize="@dimen/textSize14" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:orientation="vertical"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:passwordToggleEnabled="true">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/id_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center|left"
+                        android:hint="Password"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color0E0E0F"
+                        android:textColorHint="@color/color595c63"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/textSize14" />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -146,7 +161,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/dimen_5_dp"
                             android:text="SIGN UP"
-                            android:textColor="@color/colorPrimaryDark"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/textSize14"
                             android:textStyle="bold" />
 

@@ -47,6 +47,11 @@ public class MyAllTasixFragment extends Fragment {
         // Inflate the layout for this fragment
         context = getActivity();
         view = inflater.inflate(R.layout.fragment_my_all_taxis, container, false);
+        init();
         return view;
+    }
+
+    private void init() {
+
     }
 }

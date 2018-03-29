@@ -48,6 +48,11 @@ public class CompletedTripFragment extends Fragment {
         // Inflate the layout for this fragment
         context = getActivity();
         view = inflater.inflate(R.layout.fragment_completed_trip, container, false);
+        init();
         return view;
+    }
+
+    private void init() {
+
     }
 }
