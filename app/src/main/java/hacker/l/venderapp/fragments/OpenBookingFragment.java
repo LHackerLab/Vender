@@ -6,13 +6,20 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import hacker.l.venderapp.R;
+import hacker.l.venderapp.adapter.OpenBookingAdapter;
+import hacker.l.venderapp.models.Result;
 import hacker.l.venderapp.utilities.FontManager;
 
 
@@ -44,6 +51,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
 
     View view;
     Context context;
+    RecyclerView recycleView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -57,6 +65,84 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
 
     private void init() {
         Typeface nova = FontManager.getFontTypeface(context, "fonts/ProximaNova-Regular.otf");
+        recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+        recycleView.setLayoutManager(linearLayoutManager);
+        List<Result> resultList = getAllOpenBookDataList();
+        OpenBookingAdapter openBookingAdapter = new OpenBookingAdapter(context, resultList);
+        recycleView.setAdapter(openBookingAdapter);
+
+    }
+
+    private List<Result> getAllOpenBookDataList() {
+        List<Result> resultList = new ArrayList<>();
+        Result result = new Result();
+        result.setTripType("One Way Trip");
+        result.setDistance("140");
+        result.setCabName("Suv");
+        result.setDate("4 Aug");
+        result.setTripName("Delhi To Bareilly");
+        result.setCabtype("Bhatia Cab Premium");
+        result.setTime("11:30AM");
+        resultList.add(result);
+        result.setTripType("Two Way Trip");
+        result.setDistance("170");
+        result.setCabName("SEDAN");
+        result.setDate("14 Aug");
+        result.setTripName("Bareilly to Delhi");
+        result.setCabtype("Bhatia Cab COMFORT");
+        result.setTime("11:30AM");
+        resultList.add(result);
+        result.setTripType("One Way Trip");
+        result.setDistance("140");
+        result.setCabName("Suv");
+        result.setDate("4 Aug");
+        result.setTripName("Delhi To Bareilly");
+        result.setCabtype("Bhatia Cab Premium");
+        result.setTime("11:30AM");
+        resultList.add(result);
+        result.setTripType("Two Way Trip");
+        result.setDistance("170");
+        result.setCabName("SEDAN");
+        result.setDate("14 Aug");
+        result.setTripName("Bareilly to Delhi");
+        result.setCabtype("Bhatia Cab COMFORT");
+        result.setTime("11:30AM");
+        resultList.add(result);
+        result.setTripType("One Way Trip");
+        result.setDistance("160");
+        result.setCabName("Suv");
+        result.setDate("4 Aug");
+        result.setTripName("Delhi To Bareilly");
+        result.setCabtype("Bhatia Cab Premium");
+        result.setTime("11:30AM");
+        resultList.add(result);
+        result.setTripType("Two Way Trip");
+        result.setDistance("170");
+        result.setCabName("SEDAN");
+        result.setDate("14 Aug");
+        result.setTripName("Bareilly to Delhi");
+        result.setCabtype("Bhatia Cab COMFORT");
+        result.setTime("11:30AM");
+        resultList.add(result);
+        result.setTripType("One Way Trip");
+        result.setDistance("100");
+        result.setCabName("Suv");
+        result.setDate("4 Aug");
+        result.setTripName("Delhi To Bareilly");
+        result.setCabtype("Bhatia Cab Premium");
+        result.setTime("11:30AM");
+        resultList.add(result);
+        result.setTripType("Two Way Trip");
+        result.setDistance("110");
+        result.setCabName("SEDAN");
+        result.setDate("14 Aug");
+        result.setTripName("Bareilly to Delhi");
+        result.setCabtype("Bhatia Cab COMFORT");
+        result.setTime("11:30AM");
+        resultList.add(result);
+        return resultList;
+
     }
 
 

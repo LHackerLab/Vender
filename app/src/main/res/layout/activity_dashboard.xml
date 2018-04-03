@@ -38,13 +38,14 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin5"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:id="@+id/layout_opnebooking"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -59,7 +60,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="Open Bookings"
                             android:textAllCaps="false"
@@ -70,8 +70,8 @@
                     <LinearLayout
                         android:id="@+id/layout_booking"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -86,7 +86,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="Assigned Bookings"
                             android:textAllCaps="false"
@@ -97,8 +96,8 @@
                     <LinearLayout
                         android:id="@+id/layout_vids"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -113,7 +112,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="My Bids"
                             android:textAllCaps="false"
@@ -124,8 +122,8 @@
                     <LinearLayout
                         android:id="@+id/layout_avality"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -140,7 +138,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="Availability"
                             android:textAllCaps="false"
@@ -151,8 +148,8 @@
                     <LinearLayout
                         android:id="@+id/layout_completeTrip"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -167,7 +164,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="Completed Trips"
                             android:textAllCaps="false"
@@ -178,8 +174,8 @@
                     <LinearLayout
                         android:id="@+id/layout_toturial"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -194,7 +190,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="Tutorials"
                             android:textAllCaps="false"
@@ -205,8 +200,8 @@
                     <LinearLayout
                         android:id="@+id/layout_account"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -221,7 +216,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="My Account"
                             android:textAllCaps="false"
@@ -232,8 +226,8 @@
                     <LinearLayout
                         android:id="@+id/layout_city"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -248,7 +242,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="My Cities"
                             android:textAllCaps="false"
@@ -259,8 +252,8 @@
                     <LinearLayout
                         android:id="@+id/layout_taxi"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -275,7 +268,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="My Taxis"
                             android:textAllCaps="false"
@@ -286,8 +278,8 @@
                     <LinearLayout
                         android:id="@+id/layout_driverList"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -302,7 +294,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="My Drivers"
                             android:textAllCaps="false"
@@ -313,8 +304,8 @@
                     <LinearLayout
                         android:id="@+id/layout_settings"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -329,7 +320,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="Settings"
                             android:textAllCaps="false"
@@ -340,8 +330,8 @@
                     <LinearLayout
                         android:id="@+id/layout_tripmanager"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -356,7 +346,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="Trip Manager"
                             android:textAllCaps="false"
@@ -367,8 +356,8 @@
                     <LinearLayout
                         android:id="@+id/layout_information"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/background"
+                        android:layout_height="@dimen/dimen_40_dp"
+                        android:background="@drawable/done_corner_round"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -383,7 +372,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:background="@color/white"
                             android:gravity="center|left"
                             android:text="Information"
                             android:textAllCaps="false"
