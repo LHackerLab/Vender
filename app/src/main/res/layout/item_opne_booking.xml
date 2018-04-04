@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/linearLayout"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="@dimen/margin5">
+        android:layout_marginBottom="@dimen/margin5"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,9 +20,9 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5"
                 android:layout_weight=".4"
                 android:text="Trip Type"
-                android:layout_marginLeft="@dimen/margin5"
                 android:textColor="@color/grey_hard"
                 android:textSize="@dimen/textSize14" />
 
@@ -53,9 +53,9 @@
                 android:id="@+id/tv_tripType"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin5"
                 android:layout_weight=".4"
                 android:text=""
-                android:layout_marginLeft="@dimen/margin5"
                 android:textColor="@color/black"
                 android:textSize="@dimen/textSize14" />
 
@@ -121,18 +121,35 @@
             android:layout_marginTop="@dimen/margin5"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tv_time"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight=".3"
-                android:background="@drawable/capsule_button"
-                android:text=""
-                android:layout_marginRight="@dimen/margin5"
                 android:layout_marginLeft="@dimen/margin5"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="@dimen/textSize16" />
+                android:layout_marginRight="@dimen/margin5"
+                android:layout_weight=".35"
+                android:background="@drawable/capsule_button"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:background="@drawable/ic_av_timer_black_24dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize16" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize14" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tv_tax"
@@ -144,20 +161,20 @@
                 android:gravity="center"
                 android:text="All Inclusive"
                 android:textColor="@color/white"
-                android:textSize="@dimen/textSize16" />
+                android:textSize="@dimen/textSize14" />
 
             <TextView
                 android:id="@+id/tv_bidNow"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginRight="@dimen/margin5"
-                android:layout_weight=".4"
+                android:layout_weight=".35"
                 android:background="@drawable/capsule_button"
                 android:gravity="center"
-                android:textAllCaps="false"
                 android:text="Bid Now"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/textSize16" />
+                android:textSize="@dimen/textSize14" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
