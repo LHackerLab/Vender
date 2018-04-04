@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import hacker.l.venderapp.R;
+import hacker.l.venderapp.activity.DashboardActivity;
 
 public class TutorialsFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -52,6 +53,7 @@ public class TutorialsFragment extends Fragment {
     }
 
     private void init() {
-
+        DashboardActivity dashboardActivity = (DashboardActivity) context;
+        dashboardActivity.setTitle("Tutorials");
     }
 }

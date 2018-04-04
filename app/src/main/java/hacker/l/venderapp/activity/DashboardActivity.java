@@ -44,7 +44,7 @@ import hacker.l.venderapp.utilities.FontManager;
 public class DashboardActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     TextView tv_information, tv_tripmanager, tv_settings, tv_drivres, tv_taxi, tv_city, tv_account, tv_toturial, tv_completeTrip,
-            tv_avality, tv_bids, tv_booking, tv_opnebooking;
+            tv_avality, tv_bids, tv_booking, tv_opnebooking, tv_title;
     LinearLayout layout_information, layout_tripmanager, layout_settings, layout_driverList, layout_taxi, layout_city,
             layout_completeTrip, layout_account, layout_toturial, layout_avality, layout_vids, layout_booking, layout_opnebooking;
     DrawerLayout drawer;
@@ -95,6 +95,7 @@ public class DashboardActivity extends AppCompatActivity
         tv_bids = (TextView) findViewById(R.id.tv_bids);
         tv_booking = (TextView) findViewById(R.id.tv_booking);
         tv_opnebooking = (TextView) findViewById(R.id.tv_opnebooking);
+        tv_title = (TextView) findViewById(R.id.tv_title);
         tv_information.setTypeface(nova);
         tv_tripmanager.setTypeface(nova);
         tv_settings.setTypeface(nova);
@@ -111,6 +112,10 @@ public class DashboardActivity extends AppCompatActivity
         setOnclick();
         OpenBookingFragment openBookingFragment = OpenBookingFragment.newInstance("", "");
         moveFragment(openBookingFragment);
+    }
+
+    public void setTitle(String title) {
+        tv_title.setText(title);
     }
 
     private void setOnclick() {
@@ -155,7 +160,7 @@ public class DashboardActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            DbHelper dbHelper=new DbHelper(this);
+            DbHelper dbHelper = new DbHelper(this);
             dbHelper.deleteUserData();
             Intent intent = new Intent(DashboardActivity.this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -277,6 +282,7 @@ public class DashboardActivity extends AppCompatActivity
 
         }
     }
+
     //for hid keyboard when tab outside edittext box
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {

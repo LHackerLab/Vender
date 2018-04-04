@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import hacker.l.venderapp.R;
+import hacker.l.venderapp.activity.DashboardActivity;
 
 
 public class MyBidsFragment extends Fragment {
@@ -53,6 +54,7 @@ public class MyBidsFragment extends Fragment {
     }
 
     private void init() {
-
+        DashboardActivity dashboardActivity =(DashboardActivity)context;
+        dashboardActivity.setTitle("My Bids");
     }
 }

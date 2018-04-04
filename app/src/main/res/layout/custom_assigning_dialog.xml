@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@drawable/ic_clear_black_24dp"
+        android:gravity="center|end"
+        android:textSize="@dimen/textSize14" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin15"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin20"
+        android:gravity="center|left"
+        android:text="Hi Vender partner,"
+        android:textColor="@color/purple"
+        android:textSize="@dimen/textSize14" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin20"
+        android:layout_marginRight="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin10"
+        android:gravity="center|left"
+        android:text="Rs. 4000 will be deducated as security amount from your account.Please ignore if already deducated/paid.This amount is refundable and will help in building mutual trust and improving quality of service of Bhatia Taxis for our Customers."
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize14" />
+</LinearLayout>

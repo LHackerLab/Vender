@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import hacker.l.venderapp.R;
+import hacker.l.venderapp.activity.DashboardActivity;
 
 public class MyDriversFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -53,6 +54,7 @@ public class MyDriversFragment extends Fragment {
     }
 
     private void init() {
-
+        DashboardActivity dashboardActivity = (DashboardActivity) context;
+        dashboardActivity.setTitle("My Drivers");
     }
 }

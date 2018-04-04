@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import hacker.l.venderapp.R;
+import hacker.l.venderapp.activity.DashboardActivity;
+
 public class MyCitiesFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,6 +53,7 @@ public class MyCitiesFragment extends Fragment {
     }
 
     private void init() {
-
+        DashboardActivity dashboardActivity =(DashboardActivity)context;
+        dashboardActivity.setTitle("My Cities");
     }
 }

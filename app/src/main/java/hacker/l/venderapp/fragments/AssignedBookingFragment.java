@@ -1,13 +1,17 @@
 package hacker.l.venderapp.fragments;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.TextView;
 
 import hacker.l.venderapp.R;
+import hacker.l.venderapp.activity.DashboardActivity;
 
 
 public class AssignedBookingFragment extends Fragment {
@@ -53,6 +57,21 @@ public class AssignedBookingFragment extends Fragment {
     }
 
     private void init() {
-
+        DashboardActivity dashboardActivity = (DashboardActivity) context;
+        dashboardActivity.setTitle("Assigned Booking");
+        final Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.custom_assigning_dialog);
+        dialog.show();
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+        Window window = dialog.getWindow();
+        window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        TextView tv_close = (TextView) dialog.findViewById(R.id.tv_close);
+        tv_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
     }
 }

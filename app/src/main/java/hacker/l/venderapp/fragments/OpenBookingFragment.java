@@ -25,6 +25,7 @@ import java.util.Date;
 import java.util.List;
 
 import hacker.l.venderapp.R;
+import hacker.l.venderapp.activity.DashboardActivity;
 import hacker.l.venderapp.adapter.OpenBookingAdapter;
 import hacker.l.venderapp.models.Result;
 import hacker.l.venderapp.utilities.FontManager;
@@ -77,6 +78,8 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
     }
 
     private void init() {
+        DashboardActivity dashboardActivity =(DashboardActivity)context;
+        dashboardActivity.setTitle("Open Booking");
         Typeface nova = FontManager.getFontTypeface(context, "fonts/ProximaNova-Regular.otf");
         recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
         edt_city = (EditText) view.findViewById(R.id.edt_city);
