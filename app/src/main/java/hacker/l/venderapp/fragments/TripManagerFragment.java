@@ -3,12 +3,21 @@ package hacker.l.venderapp.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import hacker.l.venderapp.R;
 import hacker.l.venderapp.activity.DashboardActivity;
+import hacker.l.venderapp.adapter.AvailabilityAdapter;
+import hacker.l.venderapp.adapter.TripManagerAdapter;
+import hacker.l.venderapp.models.Result;
 
 public class TripManagerFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -41,6 +50,7 @@ public class TripManagerFragment extends Fragment {
 
     View view;
     Context context;
+    RecyclerView recycleView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -55,5 +65,29 @@ public class TripManagerFragment extends Fragment {
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Trip Manager");
+        recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+        recycleView.setLayoutManager(linearLayoutManager);
+        List<Result> resultList = getList();
+        TripManagerAdapter adapter = new TripManagerAdapter(context, resultList);
+        recycleView.setAdapter(adapter);
+    }
+
+    private List<Result> getList() {
+        List<Result> resultList = new ArrayList<>();
+        Result result = new Result();
+        result.setName("Lalit Singh");
+        result.setPhone("9917218408");
+        resultList.add(result);
+        result.setName("Lalit");
+        result.setPhone("9917218408");
+        resultList.add(result);
+        result.setName("Lalit Singh");
+        result.setPhone("9917218408");
+        resultList.add(result);
+        result.setName("Lalit");
+        result.setPhone("9917218408");
+        resultList.add(result);
+        return resultList;
     }
 }

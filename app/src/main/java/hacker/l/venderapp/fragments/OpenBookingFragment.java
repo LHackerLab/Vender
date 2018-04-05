@@ -11,7 +11,9 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.InputType;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
@@ -78,7 +80,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
     }
 
     private void init() {
-        DashboardActivity dashboardActivity =(DashboardActivity)context;
+        DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Open Booking");
         Typeface nova = FontManager.getFontTypeface(context, "fonts/ProximaNova-Regular.otf");
         recycleView = (RecyclerView) view.findViewById(R.id.recycleView);

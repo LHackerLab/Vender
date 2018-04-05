@@ -53,7 +53,7 @@
                             android:layout_height="30dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/home" />
+                            android:src="@drawable/ic_av_timer_black_24dp" />
 
                         <TextView
                             android:id="@+id/tv_opnebooking"
@@ -79,7 +79,7 @@
                             android:layout_height="30dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/drievers" />
+                            android:src="@drawable/ic_date_range_black_24dp" />
 
                         <TextView
                             android:id="@+id/tv_booking"
@@ -105,7 +105,7 @@
                             android:layout_height="30dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/mycabs" />
+                            android:src="@drawable/mytrip" />
 
                         <TextView
                             android:id="@+id/tv_bids"
@@ -235,7 +235,7 @@
                             android:layout_height="30dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/help" />
+                            android:src="@drawable/ic_location_on_black_24dp" />
 
                         <TextView
                             android:id="@+id/tv_city"
@@ -261,7 +261,7 @@
                             android:layout_height="30dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/help" />
+                            android:src="@drawable/ic_directions_car_black_24dp" />
 
                         <TextView
                             android:id="@+id/tv_taxi"
@@ -287,7 +287,7 @@
                             android:layout_height="30dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/help" />
+                            android:src="@drawable/service" />
 
                         <TextView
                             android:id="@+id/tv_drivres"
@@ -313,7 +313,7 @@
                             android:layout_height="30dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/service" />
+                            android:src="@drawable/ic_settings_applications_black_24dp" />
 
                         <TextView
                             android:id="@+id/tv_settings"
@@ -339,7 +339,7 @@
                             android:layout_height="30dp"
                             android:layout_gravity="center"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/help" />
+                            android:src="@drawable/ic_swap_calls_black_24dp" />
 
                         <TextView
                             android:id="@+id/tv_tripmanager"
