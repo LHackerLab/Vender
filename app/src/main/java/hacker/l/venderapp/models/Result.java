@@ -63,6 +63,16 @@ public class Result {
     private String cabName;
     private String name;
 
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    private String cityName;
+
     public String getName() {
         return name;
     }
