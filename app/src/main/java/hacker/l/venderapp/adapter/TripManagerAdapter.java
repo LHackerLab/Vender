@@ -52,9 +52,9 @@ public class TripManagerAdapter extends RecyclerView.Adapter<TripManagerAdapter.
     @Override
     public void onBindViewHolder(TripManagerAdapter.MyViewHolder holder, final int position) {
         if (position % 2 == 1) {
-            holder.linearLayout.setBackgroundColor(Color.parseColor("#44eebd82"));
+            holder.linearLayout.setBackgroundColor(Color.parseColor("#ffffff"));
         } else {
-            holder.linearLayout.setBackgroundColor(Color.parseColor("#44d8d27e"));
+            holder.linearLayout.setBackgroundColor(Color.parseColor("#ffffff"));
         }
         holder.tv_name.setText("Name:" + userList.get(position).getName());
         holder.tv_phone.setText(userList.get(position).getPhone());

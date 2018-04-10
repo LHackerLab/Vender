@@ -56,5 +56,6 @@ public class InformationFragment extends Fragment {
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Information");
+        dashboardActivity.addCity(false);
     }
 }

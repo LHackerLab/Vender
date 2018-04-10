@@ -31,4 +31,9 @@
             android:shadowColor="@color/purple"
             android:showText="true" />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin1"
+        android:layout_marginTop="@dimen/margin5"
+        android:background="@color/blue" />
 </LinearLayout>

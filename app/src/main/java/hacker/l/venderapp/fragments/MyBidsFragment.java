@@ -3,6 +3,8 @@ package hacker.l.venderapp.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +44,7 @@ public class MyBidsFragment extends Fragment {
 
     View view;
     Context context;
+    RecyclerView recyclerView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,7 +57,12 @@ public class MyBidsFragment extends Fragment {
     }
 
     private void init() {
-        DashboardActivity dashboardActivity =(DashboardActivity)context;
+        DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("My Bids");
+        dashboardActivity.addCity(false);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recycleView);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
     }
 }

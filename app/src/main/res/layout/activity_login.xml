@@ -163,7 +163,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/dimen_5_dp"
                             android:text="SIGN UP"
-                            android:textColor="@color/white"
+                            android:textColor="@color/purple"
                             android:textSize="@dimen/textSize14"
                             android:textStyle="bold" />
 

@@ -57,5 +57,6 @@ public class MyAccountFragment extends Fragment {
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("My Account");
+        dashboardActivity.addCity(false);
     }
 }

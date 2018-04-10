@@ -51,6 +51,7 @@ public class TripManagerFragment extends Fragment {
     View view;
     Context context;
     RecyclerView recycleView;
+    Result result;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,6 +66,7 @@ public class TripManagerFragment extends Fragment {
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Trip Manager");
+        dashboardActivity.addCity(false);
         recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recycleView.setLayoutManager(linearLayoutManager);
@@ -75,17 +77,20 @@ public class TripManagerFragment extends Fragment {
 
     private List<Result> getList() {
         List<Result> resultList = new ArrayList<>();
-        Result result = new Result();
+        result = new Result();
         result.setName("Lalit Singh");
         result.setPhone("9917218408");
         resultList.add(result);
-        result.setName("Lalit");
+        result = new Result();
+        result.setName("Bilal");
         result.setPhone("9917218408");
         resultList.add(result);
-        result.setName("Lalit Singh");
+        result = new Result();
+        result.setName("Krishna Singh");
         result.setPhone("9917218408");
         resultList.add(result);
-        result.setName("Lalit");
+        result = new Result();
+        result.setName("Ankit");
         result.setPhone("9917218408");
         resultList.add(result);
         return resultList;

@@ -49,6 +49,7 @@ public class AvaillabilityFragment extends Fragment {
     View view;
     Context context;
     RecyclerView recycleView;
+    Result result;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,6 +64,7 @@ public class AvaillabilityFragment extends Fragment {
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Availlability");
+        dashboardActivity.addCity(false);
         recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recycleView.setLayoutManager(linearLayoutManager);
@@ -73,27 +75,32 @@ public class AvaillabilityFragment extends Fragment {
 
     private List<Result> getAvailablityList() {
         List<Result> resultList = new ArrayList<>();
-        Result result = new Result();
+        result = new Result();
         result.setCabName("Maruti");
         result.setCarNumber("Up25Bt4590");
         result.setCarModel("2016");
         resultList.add(result);
+        result = new Result();
         result.setCabName("TaTa");
         result.setCarNumber("Up25Bt4590");
         result.setCarModel("2010");
         resultList.add(result);
+        result = new Result();
         result.setCabName("Maruti");
         result.setCarNumber("Up25Bt4590");
         result.setCarModel("2016");
         resultList.add(result);
+        result = new Result();
         result.setCabName("TaTa");
         result.setCarNumber("Up25Bt4590");
         result.setCarModel("2010");
         resultList.add(result);
+        result = new Result();
         result.setCabName("Maruti");
         result.setCarNumber("Up25Bt4590");
         result.setCarModel("2016");
         resultList.add(result);
+        result = new Result();
         result.setCabName("TaTa");
         result.setCarNumber("Up25Bt4590");
         result.setCarModel("2010");

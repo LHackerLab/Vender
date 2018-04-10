@@ -43,7 +43,7 @@ import hacker.l.venderapp.utilities.FontManager;
 
 public class DashboardActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
-    TextView tv_information, tv_tripmanager, tv_settings, tv_drivres, tv_taxi, tv_city, tv_account, tv_toturial, tv_completeTrip,
+    public TextView tv_information, tv_tripmanager, tv_addCity, tv_settings, tv_drivres, tv_taxi, tv_city, tv_account, tv_toturial, tv_completeTrip,
             tv_avality, tv_bids, tv_booking, tv_opnebooking, tv_title;
     LinearLayout layout_information, layout_tripmanager, layout_settings, layout_driverList, layout_taxi, layout_city,
             layout_completeTrip, layout_account, layout_toturial, layout_avality, layout_vids, layout_booking, layout_opnebooking;
@@ -96,6 +96,7 @@ public class DashboardActivity extends AppCompatActivity
         tv_booking = (TextView) findViewById(R.id.tv_booking);
         tv_opnebooking = (TextView) findViewById(R.id.tv_opnebooking);
         tv_title = (TextView) findViewById(R.id.tv_title);
+        tv_addCity = (TextView) findViewById(R.id.tv_addCity);
         tv_information.setTypeface(nova);
         tv_tripmanager.setTypeface(nova);
         tv_settings.setTypeface(nova);
@@ -111,7 +112,15 @@ public class DashboardActivity extends AppCompatActivity
         tv_opnebooking.setTypeface(nova);
         setOnclick();
         OpenBookingFragment openBookingFragment = OpenBookingFragment.newInstance("", "");
-        moveFragment(openBookingFragment);
+        moveHomeFragment(openBookingFragment);
+    }
+
+    public void addCity(boolean bb) {
+        if (bb) {
+            tv_addCity.setVisibility(View.VISIBLE);
+        } else {
+            tv_addCity.setVisibility(View.GONE);
+        }
     }
 
     public void setTitle(String title) {
@@ -142,33 +151,6 @@ public class DashboardActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.dashboard, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            DbHelper dbHelper = new DbHelper(this);
-            dbHelper.deleteUserData();
-            Intent intent = new Intent(DashboardActivity.this, LoginActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -206,7 +188,15 @@ public class DashboardActivity extends AppCompatActivity
         FragmentManager fragmentManager = ((FragmentActivity) this).getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.container, fragment)
-                //.addToBackStack(null)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    private void moveHomeFragment(Fragment fragment) {
+        FragmentManager fragmentManager = ((FragmentActivity) this).getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, fragment)
+//                .addToBackStack(null)
                 .commit();
     }
 

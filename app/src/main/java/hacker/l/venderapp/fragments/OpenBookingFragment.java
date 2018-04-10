@@ -16,6 +16,8 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -68,6 +70,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
     LinearLayout layout_date, laout_clear;
     public String[] MONTHS = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     private String CreatedOn;
+    Result result;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -82,6 +85,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Open Booking");
+        dashboardActivity.addCity(false);
         Typeface nova = FontManager.getFontTypeface(context, "fonts/ProximaNova-Regular.otf");
         recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
         edt_city = (EditText) view.findViewById(R.id.edt_city);
@@ -108,6 +112,8 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
             }
         });
         setCurrentDate();
+        getActivity().getWindow().setSoftInputMode(WindowManager.
+                LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
     //set current date
@@ -155,7 +161,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
 
     private List<Result> getAllOpenBookDataList() {
         List<Result> resultList = new ArrayList<>();
-        Result result = new Result();
+        result = new Result();
         result.setTripType("One Way Trip");
         result.setDistance("140");
         result.setCabName("Suv");
@@ -164,6 +170,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
         result.setCabtype("Bhatia Cab Premium");
         result.setTime("11:30AM");
         resultList.add(result);
+        result = new Result();
         result.setTripType("Two Way Trip");
         result.setDistance("170");
         result.setCabName("SEDAN");
@@ -172,6 +179,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
         result.setCabtype("Bhatia Cab COMFORT");
         result.setTime("11:30AM");
         resultList.add(result);
+        result = new Result();
         result.setTripType("One Way Trip");
         result.setDistance("140");
         result.setCabName("Suv");
@@ -180,6 +188,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
         result.setCabtype("Bhatia Cab Premium");
         result.setTime("11:30AM");
         resultList.add(result);
+        result = new Result();
         result.setTripType("Two Way Trip");
         result.setDistance("170");
         result.setCabName("SEDAN");
@@ -188,6 +197,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
         result.setCabtype("Bhatia Cab COMFORT");
         result.setTime("11:30AM");
         resultList.add(result);
+        result = new Result();
         result.setTripType("One Way Trip");
         result.setDistance("160");
         result.setCabName("Suv");
@@ -196,6 +206,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
         result.setCabtype("Bhatia Cab Premium");
         result.setTime("11:30AM");
         resultList.add(result);
+        result = new Result();
         result.setTripType("Two Way Trip");
         result.setDistance("170");
         result.setCabName("SEDAN");
@@ -204,6 +215,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
         result.setCabtype("Bhatia Cab COMFORT");
         result.setTime("11:30AM");
         resultList.add(result);
+        result = new Result();
         result.setTripType("One Way Trip");
         result.setDistance("100");
         result.setCabName("Suv");
@@ -212,6 +224,7 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
         result.setCabtype("Bhatia Cab Premium");
         result.setTime("11:30AM");
         resultList.add(result);
+        result = new Result();
         result.setTripType("Two Way Trip");
         result.setDistance("110");
         result.setCabName("SEDAN");

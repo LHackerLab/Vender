@@ -56,5 +56,6 @@ public class MyDriversFragment extends Fragment {
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("My Drivers");
+        dashboardActivity.addCity(false);
     }
 }

@@ -55,5 +55,6 @@ public class MyAllTasixFragment extends Fragment {
     private void init() {
         DashboardActivity dashboardActivity =(DashboardActivity)context;
         dashboardActivity.setTitle("My All Taxis");
+        dashboardActivity.addCity(false);
     }
 }

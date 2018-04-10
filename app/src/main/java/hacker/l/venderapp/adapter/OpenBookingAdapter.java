@@ -61,9 +61,9 @@ public class OpenBookingAdapter extends RecyclerView.Adapter<OpenBookingAdapter.
     @Override
     public void onBindViewHolder(OpenBookingAdapter.MyViewHolder holder, final int position) {
         if (position % 2 == 1) {
-            holder.linearLayout.setBackgroundColor(Color.parseColor("#FED36A"));
+            holder.linearLayout.setBackgroundColor(Color.parseColor("#ffffff"));
         } else {
-            holder.linearLayout.setBackgroundColor(Color.parseColor("#44eebd82"));
+            holder.linearLayout.setBackgroundColor(Color.parseColor("#ffffff"));
         }
         holder.tv_tripType.setText(userList.get(position).getTripType());
         holder.tv_distance.setText(userList.get(position).getDistance() + "KMs");

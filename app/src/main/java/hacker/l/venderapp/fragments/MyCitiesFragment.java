@@ -3,6 +3,8 @@ package hacker.l.venderapp.fragments;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -50,6 +52,7 @@ public class MyCitiesFragment extends Fragment {
     View view;
     Context context;
     RecyclerView recycleView;
+    Result result;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,76 +67,122 @@ public class MyCitiesFragment extends Fragment {
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("My Cities");
+        dashboardActivity.addCity(true);
         recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recycleView.setLayoutManager(linearLayoutManager);
         List<Result> resultList = getList();
         MyCitiesAdapter adapter = new MyCitiesAdapter(context, resultList);
         recycleView.setAdapter(adapter);
+        dashboardActivity.tv_addCity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddCityFragment fragment = AddCityFragment.newInstance("", "");
+                moveFragment(fragment);
+            }
+        });
+
+    }
+
+    private void moveFragment(Fragment fragment) {
+        FragmentManager fragmentManager = ((FragmentActivity) context).getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, fragment)
+                .addToBackStack(null)
+                .commit();
     }
 
     private List<Result> getList() {
         List<Result> resultList = new ArrayList<>();
-        Result result = new Result();
+        result = new Result();
         result.setCityName("Bareilly");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Pilibhit");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Moradabad");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Solapur");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Ranchi");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Gwalior");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Aurangabad");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Amritsar");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Nashik");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Ludhiana");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Agra");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Ghaziabad");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Vadodara");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Patna");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Bhopal");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Thane");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Indore");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Nagpur");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Kanpur");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Lucknow");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Jaipur");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Pune");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Surat");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Kolkata");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Chennai");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Ahmedabad");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Hyderabad");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Bangalore");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Delhi");
         resultList.add(result);
-        result.setCityName("Bareilly");
+        result = new Result();
+        result.setCityName("Mumbai");
         resultList.add(result);
         return resultList;
     }

@@ -59,6 +59,7 @@ public class TutorialsFragment extends Fragment implements View.OnClickListener 
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Tutorials");
+        dashboardActivity.addCity(false);
         image_availity = (ImageView) view.findViewById(R.id.image_availity);
         image_cities = (ImageView) view.findViewById(R.id.image_cities);
         image_account = (ImageView) view.findViewById(R.id.image_account);

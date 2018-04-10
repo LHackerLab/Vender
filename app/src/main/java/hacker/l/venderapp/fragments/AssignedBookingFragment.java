@@ -59,6 +59,7 @@ public class AssignedBookingFragment extends Fragment {
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Assigned Booking");
+        dashboardActivity.addCity(false);
         final Dialog dialog = new Dialog(context);
         dialog.setContentView(R.layout.custom_assigning_dialog);
         dialog.show();

@@ -48,9 +48,9 @@ public class MyCitiesAdapter extends RecyclerView.Adapter<MyCitiesAdapter.MyView
     @Override
     public void onBindViewHolder(MyCitiesAdapter.MyViewHolder holder, final int position) {
         if (position % 2 == 1) {
-            holder.linearLayout.setBackgroundColor(Color.parseColor("#C7C7CC"));
+            holder.linearLayout.setBackgroundColor(Color.parseColor("#ffffff"));
         } else {
-            holder.linearLayout.setBackgroundColor(Color.parseColor("#44d8d27e"));
+            holder.linearLayout.setBackgroundColor(Color.parseColor("#ffffff"));
         }
         holder.tv_citiName.setText(userList.get(position).getCityName());
     }
