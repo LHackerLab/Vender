@@ -1,6 +1,8 @@
 package hacker.l.venderapp.fragments;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,6 +12,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,6 +72,8 @@ public class MyCitiesFragment extends Fragment {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("My Cities");
         dashboardActivity.addCity(true);
+        dashboardActivity.setInfo(true);
+        dashboardActivity.setHelp(true);
         recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recycleView.setLayoutManager(linearLayoutManager);
@@ -79,6 +85,41 @@ public class MyCitiesFragment extends Fragment {
             public void onClick(View v) {
                 AddCityFragment fragment = AddCityFragment.newInstance("", "");
                 moveFragment(fragment);
+            }
+        });
+        dashboardActivity.tv_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SuggestCityFragment fragment = SuggestCityFragment.newInstance("", "");
+                moveFragment(fragment);
+            }
+        });
+        dashboardActivity.tv_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPoPUp();
+            }
+        });
+    }
+
+    private void showPoPUp() {
+        final Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.custom_assigning_dialog);
+        dialog.show();
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+        Window window = dialog.getWindow();
+        window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        TextView tv_close = (TextView) dialog.findViewById(R.id.tv_close);
+        TextView tv_header = (TextView) dialog.findViewById(R.id.tv_header);
+        TextView tv_body = (TextView) dialog.findViewById(R.id.tv_body);
+        tv_header.setText("My Cities");
+        tv_body.setText("This Feature will help you to get more and more booking on your dashboard by adding more and more cities.");
+        tv_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
             }
         });
 

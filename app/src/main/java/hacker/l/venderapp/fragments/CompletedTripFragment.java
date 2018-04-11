@@ -57,5 +57,7 @@ public class CompletedTripFragment extends Fragment {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Completed Trip");
         dashboardActivity.addCity(false);
+        dashboardActivity.setInfo(false);
+        dashboardActivity.setHelp(false);
     }
 }

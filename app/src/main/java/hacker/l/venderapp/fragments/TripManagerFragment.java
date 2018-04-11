@@ -67,6 +67,8 @@ public class TripManagerFragment extends Fragment {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Trip Manager");
         dashboardActivity.addCity(false);
+        dashboardActivity.setInfo(false);
+        dashboardActivity.setHelp(false);
         recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recycleView.setLayoutManager(linearLayoutManager);

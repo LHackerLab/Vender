@@ -44,7 +44,7 @@ import hacker.l.venderapp.utilities.FontManager;
 public class DashboardActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     public TextView tv_information, tv_tripmanager, tv_addCity, tv_settings, tv_drivres, tv_taxi, tv_city, tv_account, tv_toturial, tv_completeTrip,
-            tv_avality, tv_bids, tv_booking, tv_opnebooking, tv_title;
+            tv_avality, tv_bids, tv_booking, tv_opnebooking, tv_title, tv_info,tv_help;
     LinearLayout layout_information, layout_tripmanager, layout_settings, layout_driverList, layout_taxi, layout_city,
             layout_completeTrip, layout_account, layout_toturial, layout_avality, layout_vids, layout_booking, layout_opnebooking;
     DrawerLayout drawer;
@@ -97,6 +97,8 @@ public class DashboardActivity extends AppCompatActivity
         tv_opnebooking = (TextView) findViewById(R.id.tv_opnebooking);
         tv_title = (TextView) findViewById(R.id.tv_title);
         tv_addCity = (TextView) findViewById(R.id.tv_addCity);
+        tv_info = (TextView) findViewById(R.id.tv_info);
+        tv_help = (TextView) findViewById(R.id.tv_help);
         tv_information.setTypeface(nova);
         tv_tripmanager.setTypeface(nova);
         tv_settings.setTypeface(nova);
@@ -120,6 +122,21 @@ public class DashboardActivity extends AppCompatActivity
             tv_addCity.setVisibility(View.VISIBLE);
         } else {
             tv_addCity.setVisibility(View.GONE);
+        }
+    }
+
+    public void setInfo(boolean bb) {
+        if (bb) {
+            tv_info.setVisibility(View.VISIBLE);
+        } else {
+            tv_info.setVisibility(View.GONE);
+        }
+    }
+    public void setHelp(boolean bb) {
+        if (bb) {
+            tv_help.setVisibility(View.VISIBLE);
+        } else {
+            tv_help.setVisibility(View.GONE);
         }
     }
 

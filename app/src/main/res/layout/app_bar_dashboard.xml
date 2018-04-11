@@ -28,16 +28,49 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center|left"
+                    android:singleLine="true"
                     android:textColor="@color/white"
                     android:textSize="@dimen/textSize16" />
 
                 <TextView
-                    android:id="@+id/tv_addCity"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_help"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="end"
                     android:layout_marginRight="@dimen/margin10"
+                    android:layout_toLeftOf="@+id/tv_addCity"
+                    android:layout_toStartOf="@+id/tv_addCity"
+                    android:background="@drawable/ic_help_outline_black_24dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize16"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_addCity"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:layout_toLeftOf="@+id/tv_info"
+                    android:layout_toStartOf="@+id/tv_info"
                     android:background="@drawable/ic_add_box_black_24dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize16"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/ic_add_circle_black_24dp"
                     android:textColor="@color/white"
                     android:textSize="@dimen/textSize16"
                     android:visibility="gone" />

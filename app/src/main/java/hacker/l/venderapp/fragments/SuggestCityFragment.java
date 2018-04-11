@@ -1,12 +1,12 @@
 package hacker.l.venderapp.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,12 +17,12 @@ import java.util.List;
 
 import hacker.l.venderapp.R;
 import hacker.l.venderapp.activity.DashboardActivity;
-import hacker.l.venderapp.adapter.AddCityAdapter;
 import hacker.l.venderapp.adapter.MyCitiesAdapter;
+import hacker.l.venderapp.adapter.SuggestCityAdapter;
 import hacker.l.venderapp.models.Result;
 
 
-public class AddCityFragment extends Fragment {
+public class SuggestCityFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -33,8 +33,8 @@ public class AddCityFragment extends Fragment {
     private String mParam2;
 
     // TODO: Rename and change types and number of parameters
-    public static AddCityFragment newInstance(String param1, String param2) {
-        AddCityFragment fragment = new AddCityFragment();
+    public static SuggestCityFragment newInstance(String param1, String param2) {
+        SuggestCityFragment fragment = new SuggestCityFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -51,27 +51,25 @@ public class AddCityFragment extends Fragment {
         }
     }
 
-    Context context;
     View view;
-    TextView tv_clear, tv_done;
+    Context context;
     RecyclerView recycleView;
     Result result;
-    SearchView search_barUser;
-    AddCityAdapter adapter;
+    TextView tv_clear, tv_done;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         context = getActivity();
-        view = inflater.inflate(R.layout.fragment_add_city, container, false);
-        inti();
+        view = inflater.inflate(R.layout.fragment_city_suggest, container, false);
+        init();
         return view;
     }
 
-    private void inti() {
+    private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
-        dashboardActivity.setTitle("Add City");
+        dashboardActivity.setTitle("Suggested Cities");
         dashboardActivity.addCity(false);
         dashboardActivity.setInfo(false);
         dashboardActivity.setHelp(false);
@@ -81,7 +79,7 @@ public class AddCityFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recycleView.setLayoutManager(linearLayoutManager);
         List<Result> resultList = getList();
-        adapter = new AddCityAdapter(context, resultList);
+        SuggestCityAdapter adapter = new SuggestCityAdapter(context, resultList);
         recycleView.setAdapter(adapter);
         tv_clear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,23 +91,6 @@ public class AddCityFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getFragmentManager().popBackStack();
-            }
-        });
-        search_barUser = (SearchView) view.findViewById(R.id.search_bar);
-        search_barUser.setIconified(true);
-        search_barUser.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                // filter recycler view when query submitted
-                adapter.getFilter().filter(query);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String query) {
-                // filter recycler view when text is changed
-                adapter.getFilter().filter(query);
-                return false;
             }
         });
     }

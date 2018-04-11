@@ -86,6 +86,8 @@ public class OpenBookingFragment extends Fragment implements View.OnClickListene
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Open Booking");
         dashboardActivity.addCity(false);
+        dashboardActivity.setInfo(false);
+        dashboardActivity.setHelp(false);
         Typeface nova = FontManager.getFontTypeface(context, "fonts/ProximaNova-Regular.otf");
         recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
         edt_city = (EditText) view.findViewById(R.id.edt_city);
