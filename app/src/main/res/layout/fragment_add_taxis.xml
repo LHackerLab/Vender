@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hacker.l.venderapp.fragments.AddTaxisFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40_dp"
+                android:layout_margin="@dimen/margin10"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/spinner_carName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40_dp"
+                android:layout_margin="@dimen/margin10"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/spinner_carModel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40_dp"
+                android:layout_margin="@dimen/margin10"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/spinner_carYear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40_dp"
+                android:layout_margin="@dimen/margin10"
+                android:spinnerMode="dropdown">
+
+            </Spinner>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:text="Enter Vehicle Number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40_dp"
+                android:layout_margin="@dimen/margin10"
+                android:paddingLeft="@dimen/margin10"
+                android:background="@drawable/done_corner_round"
+                android:hint="Enter Number Here"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:text="(Note: RC number doesn't contains any space)"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="@dimen/dimen_180_dp"
+                android:layout_height="@dimen/dimen_40_dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin10"
+                android:background="@drawable/capsule_button"
+                android:gravity="center"
+                android:text="Proced"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize16" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

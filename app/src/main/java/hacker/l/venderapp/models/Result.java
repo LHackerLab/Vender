@@ -113,6 +113,16 @@ public class Result {
     private String carModel;
     private String carName;
 
+    public String getRs() {
+        return rs;
+    }
+
+    public void setRs(String rs) {
+        this.rs = rs;
+    }
+
+    private String rs;
+
     public String getCarNumber() {
         return carNumber;
     }

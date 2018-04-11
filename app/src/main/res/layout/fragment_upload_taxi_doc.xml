@@ -1,0 +1,95 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hacker.l.venderapp.fragments.UploadTaxiDocFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:gravity="center">
+
+                <hacker.l.venderapp.utilities.CircleImageView
+                    android:id="@+id/image_car"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@id/image_car"
+                    android:layout_alignRight="@id/image_car"
+                    android:layout_marginBottom="@dimen/margin10"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:background="@drawable/ic_camera_alt_black_24dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/textSize14" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center"
+                android:text="Upload Taxi Picture"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:gravity="center">
+
+                <hacker.l.venderapp.utilities.CircleImageView
+                    android:id="@+id/image_rc"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@id/image_rc"
+                    android:layout_alignRight="@id/image_rc"
+                    android:layout_marginBottom="@dimen/margin10"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:background="@drawable/ic_camera_alt_black_24dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/textSize14" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center"
+                android:text="Upload RC Picture"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40_dp"
+                android:layout_margin="@dimen/margin10"
+                android:background="@drawable/capsule_button"
+                android:gravity="center"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize14" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>
