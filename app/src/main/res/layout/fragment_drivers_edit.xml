@@ -1,0 +1,183 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hacker.l.venderapp.fragments.CarDetailsFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center|left"
+                android:text="Driver Name"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize18" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin5"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/margin10"
+                android:text="lalit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin1"
+                android:layout_margin="@dimen/margin5"
+                android:background="@color/blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center|left"
+                android:text="Dl Number"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize18" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/done_corner_round"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/margin10"
+                android:text="10234829470"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin1"
+                android:layout_margin="@dimen/margin5"
+                android:background="@color/blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center|left"
+                android:text="Dl Expiry Date"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize18" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:enabled="false"
+                android:gravity="center|left"
+                android:text="1-10-2019"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin1"
+                android:layout_margin="@dimen/margin5"
+                android:background="@color/blue" />
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/margin5"-->
+            <!--android:layout_marginLeft="@dimen/margin10"-->
+            <!--android:layout_marginTop="@dimen/margin10"-->
+            <!--android:gravity="center|left"-->
+            <!--android:text="VEHICLE NUMBER"-->
+            <!--android:textColor="@color/grey_hard"-->
+            <!--android:textSize="@dimen/textSize18" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/margin1"-->
+            <!--android:layout_margin="@dimen/margin5"-->
+            <!--android:background="@color/blue" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/margin10"-->
+            <!--android:layout_marginTop="@dimen/margin10"-->
+            <!--android:gravity="center|left"-->
+            <!--android:text="UP25BT2015"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/textSize16" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center|left"
+                android:text="Mobile Number"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize18" />
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/margin1"-->
+            <!--android:layout_margin="@dimen/margin5"-->
+            <!--android:background="@color/blue" />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin10"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center|left"
+                android:text="9917218408"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize16" />
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin10"
+                android:background="@drawable/capsule_button"
+                android:gravity="center"
+                android:text="Proced"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize16" />
+
+            <TextView
+                android:id="@+id/tv_upload"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin10"
+                android:background="@drawable/capsule_button"
+                android:gravity="center"
+                android:text="Upload Document"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize16" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

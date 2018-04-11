@@ -112,6 +112,35 @@ public class Result {
     //for avalibility..
     private String carModel;
     private String carName;
+    private String dlNumber;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    private String status;
+
+    public String getDlNumber() {
+        return dlNumber;
+    }
+
+    public void setDlNumber(String dlNumber) {
+        this.dlNumber = dlNumber;
+    }
+
+    public String getDlExpirDate() {
+        return dlExpirDate;
+    }
+
+    public void setDlExpirDate(String dlExpirDate) {
+        this.dlExpirDate = dlExpirDate;
+    }
+
+    private String dlExpirDate;
 
     public String getRs() {
         return rs;
