@@ -83,7 +83,7 @@ public class AddDriverFragment extends Fragment {
 
     private void setSpinnerAdapter() {
         List<String> carNameList = new ArrayList<>();
-        carNameList.add("tata");
+        carNameList.add("Tata");
         carNameList.add("honda");
         carNameList.add("toyota");
         ArrayAdapter<String> name = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_dropdown_item, carNameList);

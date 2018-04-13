@@ -162,6 +162,16 @@ public class Result {
 
     private String carNumber;
 
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    private String price;
+
     public String getTripType() {
         return tripType;
     }

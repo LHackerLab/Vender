@@ -1,13 +1,18 @@
 package hacker.l.venderapp.fragments;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,15 +69,59 @@ public class AvaillabilityFragment extends Fragment {
     private void init() {
         DashboardActivity dashboardActivity = (DashboardActivity) context;
         dashboardActivity.setTitle("Availlability");
-        dashboardActivity.addCity(false);
+        dashboardActivity.addCity(true);
         dashboardActivity.setInfo(false);
-        dashboardActivity.setHelp(false);
+        dashboardActivity.setHelp(true);
         recycleView = (RecyclerView) view.findViewById(R.id.recycleView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recycleView.setLayoutManager(linearLayoutManager);
         List<Result> resultList = getAvailablityList();
         AvailabilityAdapter availabilityAdapter = new AvailabilityAdapter(context, resultList);
         recycleView.setAdapter(availabilityAdapter);
+        dashboardActivity.tv_addCity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddTaxisFragment fragment = AddTaxisFragment.newInstance("", "");
+                moveFragment(fragment);
+            }
+        });
+        dashboardActivity.tv_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPoPUp();
+            }
+        });
+    }
+
+    private void moveFragment(Fragment fragment) {
+        FragmentManager fragmentManager = ((FragmentActivity) context).getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, fragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    private void showPoPUp() {
+        final Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.custom_assigning_dialog);
+        dialog.show();
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCancelable(true);
+        dialog.setCanceledOnTouchOutside(true);
+        Window window = dialog.getWindow();
+        window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        TextView tv_close = (TextView) dialog.findViewById(R.id.tv_close);
+        TextView tv_header = (TextView) dialog.findViewById(R.id.tv_header);
+        TextView tv_body = (TextView) dialog.findViewById(R.id.tv_body);
+        tv_header.setText("My Car Availability");
+        tv_body.setText("This Feature will help you to inform us about your vehicle availability on a particular date,time and location.");
+        tv_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
     }
 
     private List<Result> getAvailablityList() {
