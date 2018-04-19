@@ -4,10 +4,176 @@
     android:layout_height="match_parent"
     tools:context="hacker.l.venderapp.fragments.SettingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="SettingsFragment" />
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_120_dp"
+                android:layout_height="@dimen/dimen_120_dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin10"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:text="Bhatia Cab"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin1"
+                android:layout_margin="@dimen/margin5"
+                android:background="@color/blue" />
+
+            <TextView
+                android:id="@+id/tv_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin20"
+                android:text="About Cab"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="75dp"
+                android:layout_height="@dimen/margin1"
+                android:layout_marginLeft="@dimen/margin10"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin20"
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="@dimen/margin1"
+                android:layout_marginLeft="@dimen/margin10"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin20"
+                android:text="General"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin1"
+                android:layout_margin="@dimen/margin5"
+                android:background="@color/blue" />
+
+            <TextView
+                android:id="@+id/tv_updateProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin20"
+                android:text="Update Vender Profile"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="160dp"
+                android:layout_height="@dimen/margin1"
+                android:layout_marginLeft="@dimen/margin10"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_updateDocs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin20"
+                android:text="Update Documents"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="140dp"
+                android:layout_height="@dimen/margin1"
+                android:layout_marginLeft="@dimen/margin10"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_changePass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin20"
+                android:text="Change Password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize16"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="130dp"
+                android:layout_height="@dimen/margin1"
+                android:layout_marginLeft="@dimen/margin10"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_weight=".7"
+                    android:text="Do you want to recive SMS?"
+                    android:textColor="@color/grey_hard"
+                    android:textSize="@dimen/textSize16" />
+
+                <Switch
+                    android:id="@+id/btn_switch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:layout_weight=".3" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/tv_logout"
+                android:layout_width="@dimen/dimen_120_dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@color/userNAme"
+                android:gravity="center"
+                android:text="Logout"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textSize16" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
 </FrameLayout>

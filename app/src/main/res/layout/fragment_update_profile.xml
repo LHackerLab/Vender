@@ -1,0 +1,205 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hacker.l.venderapp.fragments.UpdateProfileFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="Vender Name"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/done_corner_round"
+                android:hint="Enter Vender Name"
+                android:paddingLeft="@dimen/margin10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="Company Name "
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/done_corner_round"
+                android:hint="Enter Company Name"
+                android:paddingLeft="@dimen/margin10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="Pan Card Number"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/done_corner_round"
+                android:hint="Enter Pan Card Number"
+                android:paddingLeft="@dimen/margin10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="Address"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/done_corner_round"
+                android:hint="Enter Address"
+                android:paddingLeft="@dimen/margin10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="Bank Account Number"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/done_corner_round"
+                android:hint="Enter Bank Account Number"
+                android:paddingLeft="@dimen/margin10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="Bank Account Holder Name"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/done_corner_round"
+                android:hint="Enter Bank Account Holder Name"
+                android:paddingLeft="@dimen/margin10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="Bank Name"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/done_corner_round"
+                android:hint="Enter Bank Name"
+                android:textColor="@color/black"
+                android:paddingLeft="@dimen/margin10"
+                android:singleLine="true"
+                android:textSize="@dimen/textSize14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin5"
+                android:text="Bank IFSC Code"
+                android:textColor="@color/grey_hard"
+                android:textSize="@dimen/textSize14" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin5"
+                android:background="@drawable/done_corner_round"
+                android:hint="Enter Bank IFSC Code"
+                android:paddingLeft="@dimen/margin10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin10"
+                android:gravity="center">
+
+
+                <Button
+                    android:id="@+id/btn_cancle"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin5"
+                    android:layout_weight=".5"
+                    android:background="@drawable/capsule_button"
+                    android:text="Cancle"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize16" />
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin5"
+                    android:layout_weight=".5"
+                    android:background="@drawable/capsule_button"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize16" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>
